@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <style>
+        /* МӨЛДІР ФОН ЖӘНЕ БАЗАЛЫҚ ПАРАМЕТРЛЕР */
+        body, html {
+            margin: 0; padding: 0;
+            width: 500px; /* Виджеттің ені */
+            height: 200px; /* Виджеттің биіктігі */
+            background: transparent !important;
+            overflow: hidden;
+            font-family: 'Oswald', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .mode-card {
+            background: rgba(0, 0, 0, 0.85); /* Мөлдір қара фон */
+            border-right: 8px solid #ffcc00; /* ОҢ ЖАҚТАҒЫ сары сызық */
+            padding: 20px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* Мәтінді оң жаққа тіреу */
+            border-radius: 20px 0 0 20px;
+            box-shadow: -10px 10px 20px rgba(0,0,0,0.5);
+            animation: slideInRight 0.8s ease-out;
+        }
+
+        .label {
+            color: #ffcc00;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 5px;
+        }
+
+        .value {
+            color: white;
+            font-size: 55px;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 10px rgba(255, 204, 0, 0.3);
+        }
+
+        /* Оң жақтан кіріп келу анимациясы */
+        @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mode-card">
+        <span class="label">ОЙЫН РЕЖИМІ:</span>
+        <span class="value">СОЛО</span>
+    </div>
+
+</body>
+</html>
